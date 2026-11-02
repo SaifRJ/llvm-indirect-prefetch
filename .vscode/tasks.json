@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Emit LLVM IR (-O1)",
+      "type": "shell",
+      "command": "clang-22",
+      "args": ["-O1", "-S", "-emit-llvm", "${file}",
+               "-o", "${fileDirname}/${fileBasenameNoExtension}.ll"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}
